@@ -9,5 +9,13 @@ def create_users():
 
 
 def create_posts():
-    posts = mixer.cycle(20).blend(Post)
+    posts = mixer.cycle(10).blend(Post)
     return posts
+
+
+def fill_blogs():
+    users = UserSubscriber.objects.all()
+
+    for user in users:
+        posts = mixer.cycle(20).blend(Post, author=user)
+        print(posts)

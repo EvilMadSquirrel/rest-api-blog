@@ -8,4 +8,4 @@ class BloggerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Blogger
-        fields = ['user', 'posts', 'follow', 'readed_posts']
+        fields = ['id', 'posts', 'follow', 'readed_posts']

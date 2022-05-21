@@ -8,3 +8,5 @@ class Blogger(models.Model):
 
 
 
+
+

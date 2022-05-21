@@ -1,21 +1,16 @@
 from mixer.backend.django import mixer
-from blog.users.models import UserSubscriber
+from blog.users.models import Blogger
 from blog.posts.models import Post
 
 
 def create_users():
-    users = mixer.cycle(5).blend(UserSubscriber)
+    users = mixer.cycle(3).blend(Blogger, password='111')
     return users
 
 
-def create_posts():
-    posts = mixer.cycle(10).blend(Post)
-    return posts
-
-
 def fill_blogs():
-    users = UserSubscriber.objects.all()
+    users = Blogger.objects.all()
 
     for user in users:
-        posts = mixer.cycle(20).blend(Post, author=user)
+        posts = mixer.cycle(5).blend(Post, author=user)
         print(posts)

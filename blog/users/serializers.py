@@ -1,20 +1,11 @@
-from django.contrib.auth.models import User
-
-from blog.users.models import UserSubscriber
+from blog.users.models import Blogger
 from rest_framework import serializers
 
 
-class UserSerializer(serializers.ModelSerializer):
+class BloggerSerializer(serializers.ModelSerializer):
+    posts = serializers.StringRelatedField(many=True)
+    readed_posts = serializers.StringRelatedField(many=True)
 
     class Meta:
-        model = User
-        fields = ['username']
-
-
-class UserSubscriberSerializer(serializers.ModelSerializer):
-    user = UserSerializer(many=False)
-    subscribers = UserSerializer(many=True, required=False)
-
-    class Meta:
-        model = UserSubscriber
-        fields = ['user', 'subscribers']
+        model = Blogger
+        fields = ['user', 'posts', 'follow', 'readed_posts']

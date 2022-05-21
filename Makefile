@@ -9,7 +9,7 @@ setup: migrate
 start:
 	@poetry run python manage.py runserver
 
-shell:
+console:
 	@poetry run python manage.py shell
 
 

@@ -1,8 +1,8 @@
 from rest_framework import viewsets
-from blog.users.models import UserSubscriber
-from blog.users.serializers import UserSubscriberSerializer
+from blog.users.models import Blogger
+from blog.users.serializers import BloggerSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = UserSubscriber.objects.all().order_by('-user__date_joined')
-    serializer_class = UserSubscriberSerializer
+class BloggerViewSet(viewsets.ModelViewSet):
+    queryset = Blogger.objects.all()
+    serializer_class = BloggerSerializer

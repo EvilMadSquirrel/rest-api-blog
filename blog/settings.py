@@ -53,11 +53,12 @@ CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 
 CELERY_BROKER_URL = "redis://redis:6379"
 CELERY_RESULT_BACKEND = "redis://redis:6379"
+CELERY_IMPORTS = ("blog.posts.tasks",)
 
 CELERY_BEAT_SCHEDULE = {
     "send_news": {
         "task": "blog.posts.tasks.send_news",
-        "schedule": crontab(hour="0", minute="0"),
+        "schedule": 15,
     },
 }
 

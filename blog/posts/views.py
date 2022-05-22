@@ -21,3 +21,4 @@ class PostsViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         user_id = self.kwargs.get("user_pk")
         return self.queryset.filter(author_id=user_id).order_by("-created_at")
+

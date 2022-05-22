@@ -1,22 +1,25 @@
 migrate:
-	@poetry run python manage.py makemigrations
-	@poetry run python manage.py migrate
+	@docker compose run web python manage.py makemigrations
+	@docker compose run web python manage.py migrate
 
 setup: migrate
 	@echo Create a super user
-	@poetry run python manage.py createsuperuser
+	@docker compose run web python manage.py createsuperuser
 
 start:
-	@poetry run python manage.py runserver
+	@docker compose up
 
 console:
-	@poetry run python manage.py shell
+	@docker compose run web python manage.py shell
 
 test:
 	@poetry run python manage.py test
 
 lint:
 	@poetry run flake8 blog
+
+requirements:
+	@poetry export -f requirements.txt --output requirements.txt
 
 
 

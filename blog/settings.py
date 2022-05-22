@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+
+from celery.schedules import crontab
 from dotenv import load_dotenv
+import blog.posts.tasks
 
 load_dotenv()
 
@@ -28,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -43,7 +46,20 @@ INSTALLED_APPS = [
     "blog.users",
     "blog.posts",
     "rest_framework",
+    "django_celery_beat",
 ]
+
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
+
+CELERY_BROKER_URL = "redis://redis:6379"
+CELERY_RESULT_BACKEND = "redis://redis:6379"
+
+CELERY_BEAT_SCHEDULE = {
+    "send_news": {
+        "task": "blog.posts.tasks.send_news",
+        "schedule": crontab(hour="0", minute="0"),
+    },
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

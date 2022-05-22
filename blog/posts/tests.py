@@ -8,7 +8,7 @@ from http import HTTPStatus
 
 
 class TestPosts(TestCase):
-    fixtures = ['bloggers.json', 'users.json', 'posts.json']
+    fixtures = ["bloggers.json", "users.json", "posts.json"]
 
     def setUp(self) -> None:
         self.blogger1 = Blogger.objects.get(pk=1)
@@ -36,20 +36,20 @@ class TestPosts(TestCase):
 
     def test_user_news(self):
         client = APIClient()
-        response = client.get('/api/v1/users/3/news/')
+        response = client.get("/api/v1/users/3/news/")
         self.assertEqual(response.status_code, HTTPStatus.OK)
-        self.assertEqual(len(response.data['results']), 10)
+        self.assertEqual(len(response.data["results"]), 10)
 
     def test_user_posts(self):
         client = APIClient()
-        response = client.get('/api/v1/users/3/posts/')
+        response = client.get("/api/v1/users/3/posts/")
         self.assertEqual(response.status_code, HTTPStatus.OK)
-        self.assertEqual(len(response.data['results']), 4)
+        self.assertEqual(len(response.data["results"]), 4)
 
     def test_read_post(self):
         client = APIClient()
-        data = {
-            'readers': 3
-        }
-        response = client.put('/api/v1/users/3/news/5', data=data, format='json', follow=True)
+        data = {"readers": 3}
+        response = client.put(
+            "/api/v1/users/3/news/5", data=data, format="json", follow=True
+        )
         self.assertEqual(response.status_code, HTTPStatus.OK)

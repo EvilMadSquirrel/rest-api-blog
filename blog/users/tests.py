@@ -7,7 +7,10 @@ from http import HTTPStatus
 
 
 class TestBloggers(TestCase):
-    fixtures = ['bloggers.json', 'users.json', ]
+    fixtures = [
+        "bloggers.json",
+        "users.json",
+    ]
 
     def setUp(self) -> None:
         self.blogger1 = Blogger.objects.get(pk=1)
@@ -19,15 +22,17 @@ class TestBloggers(TestCase):
         self.user4 = User.objects.get(pk=4)
 
     def test_bloggers_list(self):
-        response = self.client.get('/api/v1/users/')
+        response = self.client.get("/api/v1/users/")
         self.assertEqual(response.status_code, HTTPStatus.OK)
-        self.assertEqual(response.data['results'][0]['id'], 1)
+        self.assertEqual(response.data["results"][0]["id"], 1)
 
     def test_blogger_follow(self):
         client = APIClient()
-        data = {
-            'follow': 2
-        }
-        response = client.put('/api/v1/users/1', data=data, format='json', follow=True)
+        data = {"follow": 2}
+        response = client.put(
+            "/api/v1/users/1",
+            data=data,
+            format="json",
+            follow=True,
+        )
         self.assertEqual(response.status_code, HTTPStatus.OK)
-

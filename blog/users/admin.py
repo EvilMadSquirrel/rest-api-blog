@@ -1,3 +1,5 @@
 from django.contrib import admin
+from blog.users.models import Blogger
 
-# Register your models here.
+
+admin.site.register(Blogger)

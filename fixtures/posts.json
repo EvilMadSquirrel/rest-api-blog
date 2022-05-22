@@ -1,0 +1,160 @@
+[
+  {
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+      "title": "Office Coach Fast Left Reveal Exist",
+      "text": "Political item group him hospital article. Analysis ball benefit business agency attention possible.\nExample ahead treatment voice senior ve",
+      "created_at": "2022-05-21T12:55:43.156Z",
+      "author": 1,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+      "title": "Camera Also Great Picture Job Beyond",
+      "text": "Could its off others common place. Behavior father serve area wish themselves.\nLay order safe director interesting force test. Mean service ",
+      "created_at": "2022-05-21T12:55:43.169Z",
+      "author": 1,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 3,
+    "fields": {
+      "title": "Officer Yourself Poor Us Yard Property",
+      "text": "Huge believe garden thank use. Painting evidence us want cut go.\nWestern capital same seek. Develop themselves participant. Think note write",
+      "created_at": "2022-05-21T12:55:43.180Z",
+      "author": 1,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 4,
+    "fields": {
+      "title": "Bad Seem Question Tough Can Agreement",
+      "text": "Speak choice must scene watch. How sit approach cup challenge network church. Energy region process budget boy size mention.\nNothing trip tr",
+      "created_at": "2022-05-21T12:55:43.205Z",
+      "author": 1,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 5,
+    "fields": {
+      "title": "Article Sport Body Morning The Mother",
+      "text": "Describe eight join leader military. Letter daughter arrive color third what. Modern discussion computer notice artist small challenge.",
+      "created_at": "2022-05-21T12:55:43.215Z",
+      "author": 1,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 6,
+    "fields": {
+      "title": "Keep Thing Step Personal Value Participant",
+      "text": "Experience response fight without author believe. Exactly risk probably campaign. Fast must discussion upon.\nSport during individual require",
+      "created_at": "2022-05-21T12:55:43.226Z",
+      "author": 2,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 7,
+    "fields": {
+      "title": "Beautiful Fast Add Hit If Feel",
+      "text": "Outside foreign from serious Democrat. Claim girl image face during power summer. Investment scene weight draw alone group month. Four build",
+      "created_at": "2022-05-21T12:55:43.235Z",
+      "author": 2,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 8,
+    "fields": {
+      "title": "Turn Why Able Business End Detail",
+      "text": "Exactly though report join interest. Report enter thousand. Expect whose final chair finish network.\nTravel artist year. Go ever guess area ",
+      "created_at": "2022-05-21T12:55:43.245Z",
+      "author": 2,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 9,
+    "fields": {
+      "title": "Next Fast Play Use Thus Relate",
+      "text": "Single between else indicate bit. Fill establish deal Mrs TV bar daughter. Become son tonight speech nothing main.",
+      "created_at": "2022-05-21T12:55:43.255Z",
+      "author": 2,
+      "readers": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 10,
+    "fields": {
+      "title": "Manage Follow Policy Order Black The",
+      "text": "Set true some ahead red affect. Too fish edge almost. Car industry benefit prepare reach.",
+      "created_at": "2022-05-21T12:55:43.265Z",
+      "author": 2,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 11,
+    "fields": {
+      "title": "Control Decision Where Audience Model East",
+      "text": "Different spend local return type. Smile seven wide also scientist similar. Night score position scene relationship also.",
+      "created_at": "2022-05-21T12:55:43.275Z",
+      "author": 3,
+      "readers": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 13,
+    "fields": {
+      "title": "Fall Citizen Talk Cup True Most",
+      "text": "Stay girl military also off citizen send religious. Thing when business view.",
+      "created_at": "2022-05-21T12:55:43.294Z",
+      "author": 3,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 14,
+    "fields": {
+      "title": "Fast News Material Economy All Day",
+      "text": "Individual middle hand short. Offer itself class.\nCourt maybe list face make all. Between that short alone factor realize soon. Under myself",
+      "created_at": "2022-05-21T12:55:43.304Z",
+      "author": 3,
+      "readers": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 15,
+    "fields": {
+      "title": "Under New Environmental Station Individual Police",
+      "text": "Also growth art the. Talk tough soldier top them before.\nTrip set money owner treatment glass middle. Pay choose soon scientist. Try perhaps",
+      "created_at": "2022-05-21T12:55:43.314Z",
+      "author": 3,
+      "readers": []
+    }
+  }
+]

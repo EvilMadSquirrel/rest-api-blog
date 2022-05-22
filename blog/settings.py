@@ -117,6 +117,9 @@ REST_FRAMEWORK = {
     'MAX_PAGE_SIZE': 50,
 }
 
+
+FIXTURE_DIRS = (os.path.join(BASE_DIR, "fixtures"),)
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 

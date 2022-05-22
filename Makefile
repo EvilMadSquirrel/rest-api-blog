@@ -12,6 +12,12 @@ start:
 console:
 	@poetry run python manage.py shell
 
+test:
+	@poetry run python manage.py test
+
+lint:
+	@poetry run flake8 blog
+
 
 
 .PHONY: install setup shell lint test check start

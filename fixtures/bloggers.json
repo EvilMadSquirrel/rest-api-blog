@@ -1,0 +1,32 @@
+[
+  {
+    "model": "users.blogger",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "follow": []
+    }
+  },
+  {
+    "model": "users.blogger",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "follow": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "users.blogger",
+    "pk": 3,
+    "fields": {
+      "user": 4,
+      "follow": [
+        2,
+        3
+      ]
+    }
+  }
+]
